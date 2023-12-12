@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>幸運大轉盤</title>
+
+    <style>
+        /* 重置默認樣式 */
+        * {
+            margin: 0;
+            padding: 0;
+            border: none;
+            outline: none;
+        }
+
+        .wrapper {
+            position: relative;
+            height: 200px;
+            width: 200px;
+            padding: 20px;
+            margin: 20px;
+            background-color: #c0381f;
+            box-shadow: #000000 0px 0px 10px;
+            border-radius: 50%;
+            /* border: 1px solid; */
+        }
+
+        .panel {
+            position: relative;
+            height: 200px;
+            width: 200px;
+            background-color: #b7b7b7;
+            border-radius: 100px;
+        }
+
+        .sector {
+            position: absolute;
+            width: 100px;
+            height: 200px;
+            border-radius: 0px 100px 100px 0;
+            overflow: hidden;
+            left: 100px;
+            top: 0px;
+            transform-origin: left center;
+        }
+
+        .sector:nth-child(1) {
+            transform: rotate(-18deg);
+        }
+
+        .sector:nth-child(2) {
+            transform: rotate(18deg);
+        }
+
+        .sector:nth-child(3) {
+            transform: rotate(54deg);
+        }
+
+        .sector:nth-child(4) {
+            transform: rotate(90deg);
+        }
+
+        .sector:nth-child(5) {
+            transform: rotate(126deg);
+        }
+
+        .sector:nth-child(6) {
+            transform: rotate(162deg);
+        }
+
+        .sector:nth-child(7) {
+            transform: rotate(198deg);
+        }
+
+        .sector:nth-child(8) {
+            transform: rotate(234deg);
+        }
+
+        .sector:nth-child(9) {
+            transform: rotate(270deg);
+        }
+
+        .sector:nth-child(10) {
+            transform: rotate(306deg);
+        }
+
+        .sector:nth-child(2n+1) .sector-inner {
+            background: #fef6e0;
+        }
+
+        .sector:nth-child(2n) .sector-inner {
+            background: #ffffff;
+        }
+
+        .sector-inner {
+            text-align: center;
+            display: block;
+            width: 40px;
+            padding: 5px 3px 0 57px;
+            height: 195px;
+            transform: translateX(-100px) rotate(36deg);
+            transform-origin: right center;
+            border-radius: 100px 0 0 100px;
+        }
+
+        .sector-inner span {
+            display: block;
+            transform-origin: center;
+            transform: rotate(-19deg);
+            color: #d46854;
+        }
+
+        .pointer {
+            position: absolute;
+            left: 79px;
+            top: 79px;
+            z-index: 10;
+            height: 30px;
+            width: 30px;
+            padding: 6px;
+            color: #fff899;
+            line-height: 15px;
+            font-size: 12px;
+            text-align: center;
+            background-color: #dc5b5b;
+            border-radius: 50%;
+            border: 1px solid #c0381f;
+        }
+
+        .pointer::after {
+            content: '';
+            position: absolute;
+            left: 14px;
+            top: -24px;
+            border-width: 12px 6px;
+            border-style: solid;
+            border-color: transparent;
+            border-bottom-color: #c0381f;
+        }
+        body{
+            /* background-image: url('../images/main.png'); */
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/main.png') no-repeat 0% 20%/ cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="panel">
+            <div class="sector">
+                <div class="sector-inner">
+                    <span>謝謝參與</span>
+                </div>
+            </div>
+            <div class="sector">
+                <div class="sector-inner">
+                    <span> 50 積分</span>
+                </div>
+            </div>
+            <div class="sector">
+                <div class="sector-inner">
+                    <span>謝謝參與</span>
+                </div>
+            </div>
+            <div class="sector">
+                <div class="sector-inner">
+                    <span>100話費</span>
+                </div>
+            </div>
+            <div class="sector">
+                <div class="sector-inner">
+                    <span> 50 積分</span>
+                </div>
+            </div>
+            <div class="sector">
+                <div class="sector-inner">
+                    <span>謝謝參與</span>
+                </div>
+            </div>
+            <div class="sector">
+                <div class="sector-inner">
+                    <span>100話費</span>
+                </div>
+            </div>
+            <div class="sector">
+                <div class="sector-inner">
+                    <span>謝謝參與</span>
+                </div>
+            </div>
+            <div class="sector">
+                <div class="sector-inner">
+                    <span> 50 積分</span>
+                </div>
+            </div>
+            <div class="sector">
+                <div class="sector-inner">
+                    <span>10元話費</span>
+                </div>
+            </div>
+            <div class="pointer">開始抽獎</div>
+        </div>
+    </div>
+</body>
+
+</html>
